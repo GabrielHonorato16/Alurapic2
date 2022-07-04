@@ -1,3 +1,6 @@
+import { PhotosListComponent } from './photos/photos-list/photos-list.component';
+import { ErrorsModule } from './errors/errors.module';
+import { AppRoutingModule } from './app.routing.module';
 import { PhotosModule } from './photos/photo.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     PhotosModule,
-    HttpClientModule
+    AppRoutingModule,
+    ErrorsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
