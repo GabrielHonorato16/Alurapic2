@@ -4,12 +4,16 @@ import { NgModule } from "@angular/core";
 import { PhotoComponent } from "./photo/photo.component";
 import { CommonModule } from '@angular/common';
 import { PhotoFormComponent } from './photo-form/photo-form.component';
+import { PhotosComponent } from './photos-list/photos/photos.component';
+import { FilterByDescription } from './photos-list/filter-by-description.pipe';
 
 
 @NgModule({
     declarations: [ PhotoComponent,
     PhotosListComponent,
-    PhotoFormComponent
+    PhotoFormComponent,
+    PhotosComponent,
+    FilterByDescription
     ],
     imports: [HttpClientModule,
       CommonModule

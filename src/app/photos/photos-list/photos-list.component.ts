@@ -1,26 +1,26 @@
+import { Photo } from './../photo/photo';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { PhotoService } from '../photo/photo.service';
 
 @Component({
-  selector: 'app-photos-list',
+  selector: 'ap-photos-list',
   templateUrl: './photos-list.component.html',
   styleUrls: ['./photos-list.component.css']
 })
 export class PhotosListComponent implements OnInit {
 
-  photos: any[] = [];
+  photos: Photo[] = [];
+  filter: string = '';
 
-  constructor(private photoService: PhotoService,
-    private activatedRoute: ActivatedRoute
-    ){}
+  constructor(private activatedRoute: ActivatedRoute){}
 
   ngOnInit(): void {
-    const userName = this.activatedRoute.snapshot.params.userName
+    this.photos= this.activatedRoute.snapshot.data['photos'];
+ }
 
-    this.photoService
-    .listFromUser(userName)
-    .subscribe(photos => this.photos = photos);
+onKeyUp(x:any){
+  this.filter = x.target.value
+}
 
-  }
 }
