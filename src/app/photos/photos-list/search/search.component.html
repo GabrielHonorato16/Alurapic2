@@ -1,3 +1,14 @@
-<p>
-  search works!
-</p>
+<div class="text-center mt-3 mb-3">
+    <form>
+      <i class="fa fa-search"></i>
+        <input
+            class="rounded"
+            type="search"
+            placeholder="search..."
+            autofocus
+            (keyup)="onKeyUp($event)"
+            [value]="value"
+            >
+    </form>
+  </div>
+

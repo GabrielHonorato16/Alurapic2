@@ -1,3 +1,4 @@
+import { SearchComponent } from './photos-list/search/search.component';
 import { PhotosListModule } from './photos-list/photos-list.module';
 import { PhotoModule } from './photo/photo.module';
 import { PhotoFormModule } from './photo-form/photo-form.module';
@@ -16,7 +17,7 @@ import { LoadButtonComponent } from './photos-list/load-button/load-button.compo
     imports: [
       PhotoFormModule,
       PhotoModule,
-      PhotosListModule
+      PhotosListModule,
     ]
 })
 export class PhotosModule {}
