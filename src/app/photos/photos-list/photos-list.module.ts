@@ -1,3 +1,5 @@
+import { DarkOnHoverModule } from './../../shared/components/directives/dark-on-hover/dark-on-hover.module';
+import { DarkenOnHoverDirective } from './../../shared/components/directives/dark-on-hover/dark-on-hover.directive';
 import { SearchComponent } from './search/search.component';
 import { CardModule } from './../../shared/components/card/card.module';
 import { PhotoModule } from './../photo/photo.module';
@@ -21,7 +23,8 @@ import { PhotosComponent } from './photos/photos.component';
   imports: [
     CommonModule,
     PhotoModule,
-    CardModule
+    CardModule,
+    DarkOnHoverModule
   ]
 })
 export class PhotosListModule { }
